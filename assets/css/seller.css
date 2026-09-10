@@ -1,0 +1,23 @@
+/* ============================================
+   Seller Dashboard Styles
+   Colors: Teal Theme (Primary)
+   ============================================ */
+
+/* Seller Layout - Uses dashboard classes from style.css */
+/* Additional seller-specific styles */
+
+.seller-page {
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* Seller specific overrides if needed */
+.seller-sidebar {
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+}
+
+.seller-sidebar .nav-item.active {
+    background: var(--color-primary);
+    color: white;
+}

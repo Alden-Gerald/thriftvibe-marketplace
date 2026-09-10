@@ -1,0 +1,214 @@
+/* ============================================
+   Admin Dashboard Styles
+   Colors: Dark Purple Theme
+   ============================================ */
+
+:root {
+    --admin-primary: #7c3aed;
+    --admin-primary-dark: #6d28d9;
+    --admin-accent: #a78bfa;
+}
+
+/* Admin Layout */
+.admin-page {
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-sidebar {
+        display: none;
+    }
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    background: #1e1b4b;
+    border-right: 1px solid rgba(124, 58, 237, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.admin-sidebar .sidebar-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.admin-sidebar .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.admin-sidebar .brand-icon {
+    font-size: 1.5rem;
+}
+
+.admin-sidebar .admin-badge {
+    background: var(--admin-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.admin-sidebar .sidebar-nav {
+    flex: 1;
+    padding: 0.75rem;
+    overflow-y: auto;
+}
+
+.admin-sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    margin-bottom: 0.25rem;
+    transition: all 0.2s;
+}
+
+.admin-sidebar .nav-item:hover {
+    background: rgba(124, 58, 237, 0.2);
+    color: white;
+}
+
+.admin-sidebar .nav-item.active {
+    background: var(--admin-primary);
+    color: white;
+}
+
+.admin-sidebar .nav-item svg {
+    width: 20px;
+    height: 20px;
+}
+
+.admin-sidebar .sidebar-footer {
+    padding: 0.75rem;
+    border-top: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.admin-sidebar .nav-item.logout {
+    color: #ef5350;
+}
+
+/* Admin Main Content */
+.admin-main {
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.admin-header h1 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+/* Admin Stats */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-stat-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-stat-card.purple {
+    border-left: 4px solid var(--admin-primary);
+}
+
+.admin-stat-icon {
+    font-size: 2rem;
+}
+
+.admin-stat-content {
+    flex: 1;
+}
+
+.admin-stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.admin-stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Admin Section Card */
+.admin-section-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.admin-section-header h2 {
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+/* Admin Buttons */
+.btn-admin {
+    background: var(--admin-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-admin:hover {
+    background: var(--admin-primary-dark);
+}
